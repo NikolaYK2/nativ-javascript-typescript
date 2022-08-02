@@ -11,5 +11,9 @@ export const getStreetsTitleHouses= (houses: housesType[])=>{
 
 //Hay street
 export const createMessages= (houses: housesType[])=>{
-    return houses.map(hay=>`Hello guys from ${hay.address.street.title}`)
+    let callback = (hay: housesType)=>{
+        return `Hello guys from ${hay.address.street.title}`
+    }
+    let newArray = houses.map(callback)
+    return newArray;
 }

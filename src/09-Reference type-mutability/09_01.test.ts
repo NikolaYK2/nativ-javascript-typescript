@@ -96,7 +96,7 @@ test('Value test', () => {
 
     const usersCount = 100;
     let adminsCount = usersCount;
-    adminsCount = adminsCount + 1;
+    adminsCount += 1;
 
     expect(usersCount).toBe(100)
     expect(adminsCount).toBe(101)

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {User} from "./06/06-callbacks";
 import {Destructuring} from "./06/Destructuring";
+import {getBanknoteList} from "./11-lessons8-JS-tests/lesson-8";
 
 let man = {
     name:"Nik",
@@ -14,6 +15,8 @@ let car = {
 }
 
 function App() {
+    let a = getBanknoteList(350);
+    console.log(a)
   return (
     <div className="App">
       <User/>

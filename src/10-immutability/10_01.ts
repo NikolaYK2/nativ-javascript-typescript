@@ -20,7 +20,7 @@ export type UserWithBooksType = UserType & {
 // =================================================================================
 
 //Массив КОМПАНИЙ===================================================================
-type Company={ id: number, title: string, }
+type Company = { id: number, title: string, }
 export type UserWithCompaniesType = UserType & {
     companies: Company[],
 }
@@ -105,13 +105,13 @@ export const updateCompanies = (u: UserWithCompaniesType,
 // =================================================================================
 
 //UPDATE COMPANIES STATE=================
-export const updateCompaniesTitle = (companies: {[key:string]: Company[]},
+export const updateCompaniesTitle = (companies: { [key: string]: Company[] },
                                      id: number,
                                      userName: string,
                                      title: string) => {
 
     let copyCompanies = {...companies}
-    copyCompanies[userName] = copyCompanies[userName].map(c =>c.id  === id ? {...c, title} : c)
+    copyCompanies[userName] = copyCompanies[userName].map(c => c.id === id ? {...c, title} : c)
     return copyCompanies;
 }
 // =================================================================================

@@ -19,7 +19,7 @@ export const User = () => {
     }
     return (
         <div>
-            <textarea onChange={nameChanged} onBlur={focusLost}>Niko</textarea>
+            <textarea onChange={nameChanged} onBlur={focusLost} defaultValue={'Niko'}></textarea>
             <button name={"delete"} onClick={deleteUser}>x</button>
             <button name={"save"} onClick={deleteUser}>x</button>
         </div>
